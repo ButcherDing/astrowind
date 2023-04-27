@@ -1,0 +1,37 @@
+---
+import { Icon } from 'astro-icon';
+
+
+---
+
+  <button type="button" class="btn-body btn-contact-initial">
+    <Icon class="btn-icon" pack="mdi" name="email" />
+    <!-- Contact -->
+  </button>
+
+  <style>
+
+    .btn-body {
+      position: fixed;
+      /* background-color: grey; */
+      border: 2px solid #333;
+      padding: 1rem;
+      border-radius: 16px;
+      z-index: 23;
+      width: 125px;
+      top: 350px;
+      right: 100px;
+      backdrop-filter: blur(5px);
+    }
+
+    /* .btn-body:after {
+      content: '';
+      position: fixed;
+      border-radius: 16px;
+      top: 350px;
+      height: 125px;
+      width: 125px;
+      right: 100px;
+      opacity: 0.5;
+    } */
+  </style>

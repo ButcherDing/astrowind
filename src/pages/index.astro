@@ -12,6 +12,7 @@ import LatestPosts from '~/components/blog/LatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import ContactButton from '~/components/widgets/ContactButton.astro';
 
 const meta = {
   title: SITE.title,
@@ -22,18 +23,19 @@ const meta = {
 
 <Layout {meta}>
   <!-- Hero Widget ******************* -->
-
+  
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+  callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
+  callToAction2={{ text: 'Learn more', href: '#features' }}
+  image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
   >
-    <Fragment slot="title">
-      Free template for <span class="hidden lg:inline">create your website <br class="2xl:hidden"/> with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS
-    </Fragment>
-
-    <Fragment slot="subtitle">
+  <Fragment slot="title">
+    Free template for <span class="hidden lg:inline">create your website <br class="2xl:hidden"/> with</span>
+    <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS
+  </Fragment>
+  
+  <Fragment slot="subtitle">
+      <ContactButton />
       <span class="hidden sm:inline">
         <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 2.0 +
         Tailwind CSS.</span
@@ -49,6 +51,7 @@ const meta = {
 
   <!-- Features Widget *************** -->
 
+  
   <Features
     highlight="Features"
     title="What you get with AstroWind"
