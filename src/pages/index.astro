@@ -19,7 +19,25 @@ const meta = {
   description: SITE.description,
   dontUseTitleTemplate: true,
 };
+
+
+
 ---
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-to-center');
+      }
+      else {
+        entry.target.classList.remove('show-to-center')
+      }
+    })
+  })
+
+  const hiddenElements = document.querySelectorAll('.hidden-to-left');
+  hiddenElements.forEach((el) => observer.observe(el));
+</script>
 
 <Layout {meta}>
   <!-- Hero Widget ******************* -->

@@ -59,3 +59,16 @@
 [data-aw-toggle-menu].expanded g > path:last-child {
   @apply rotate-45 translate-y-[-8px] translate-x-[14px];
 }
+
+.hidden-to-left {
+  position: relative;
+  transition-property: right, opacity;
+  transition-duration: .5s;
+  right: 150px;
+  opacity: 0;
+}
+
+.show-to-center {
+  right: 0;
+  opacity: 1;
+}
